@@ -1,43 +1,49 @@
 <template>
   <div>
-    <!-- Include NavBar component for the hamburger menu -->
+    <!-- Components -->
     <NavBar />
     
-    <!-- Sections of your page -->
-    <section id="home" class="p-20 bg-gray-100 text-black">
-      <h2>Home</h2>
-      <p>Welcome to my portfolio!</p>
-    </section>
-
-    <section id="about" class="p-20 bg-white text-black">
-      <h2>About</h2>
-      <p>Learn more about me!</p>
-    </section>
-
-    <section id="projects" class="p-20 bg-gray-100 text-black">
-      <h2>Projects</h2>
-      <p>Check out my amazing projects!</p>
-    </section>
-
-    <section id="contact" class="p-20 bg-white text-black">
-      <h2>Contact</h2>
-      <p>Get in touch with me!</p>
-    </section>
+    <!-- Sections -->
+    <AboutSection />
+    <ExpertiseSection />
+    <ProjectsSection />
+    <ExperienceResumeSection />
+    <ContactSection />
+    
   </div>
 </template>
 
 <script>
-// Import the NavBar component
+// Import necessary components
 import NavBar from './components/NavBar.vue';
+import AboutSection from './sections/AboutSection.vue';
+import ContactSection from './sections/ContactSection.vue';
+import ExpertiseSection from './sections/ExpertiseSection.vue';
+import ProjectsSection from './sections/ProjectsSection.vue';
+import ExperienceResumeSection from './sections/ExperienceResumeSection.vue';
 
 export default {
   name: 'App',
-  components: {
-    NavBar,  // Register NavBar to be used in the template
+  components: { // Registration
+    NavBar,
+    AboutSection,
+    ContactSection,
+    ExpertiseSection,
+    ProjectsSection,
+    ExperienceResumeSection,
+
+
   },
 };
 </script>
 
 <style scoped>
-/* Add your global styles here */
+/* Global styles */
+html {
+  scroll-behavior: smooth;
+}
+
+
 </style>
+
+
