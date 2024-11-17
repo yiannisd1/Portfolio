@@ -10,6 +10,9 @@ import { VueScrollProgress } from 'vue-scroll-progress';  // For scroll progress
 import gsap from 'gsap';  // For GSAP animations
 import ScrollMagic from 'scrollmagic';  // For ScrollMagic
 
+import 'material-design-icons-iconfont/dist/material-design-icons.css';
+import 'animate.css'; // Import Animate.css styles
+
 // Create the app instance
 const app = createApp(App)
 
