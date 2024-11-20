@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import App from '@/App.vue';
+import HomeSection from '@/sections/HomeSection.vue'; // New parent component
 
 const routes = [
-  { path: '/', component: App },
+  { path: '/', component: HomeSection }, // Single root route
 ];
 
 const router = createRouter({
