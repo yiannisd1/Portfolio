@@ -8,10 +8,10 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';  // Import AOS styles
 import { VueScrollProgress } from 'vue-scroll-progress';  // For scroll progress indicator
 import gsap from 'gsap';  // For GSAP animations
-import ScrollMagic from 'scrollmagic';  // For ScrollMagic
-
+import { ScrollMagic } from 'vue-scrollmagic';
 import 'material-design-icons-iconfont/dist/material-design-icons.css';
 import 'animate.css'; // Import Animate.css styles
+import * as THREE from 'three'; 
 
 // Create the app instance
 const app = createApp(App)
@@ -21,6 +21,10 @@ app
   .use(router)
   .use(VueScrollTo, { duration: 500, easing: 'ease-in-out' }) // Global configuration for scroll behavior
   .use(VueScrollProgress) // Use vue-scroll-progress
+  .use(AOS.init()) // Initialize AOS
+  .use(gsap) // Use GSAP
+  .use(ScrollMagic) // Use ScrollMagic
+  .use(THREE)
   .mount('#app');
 
 // Initialize AOS (Animate On Scroll) on mount
